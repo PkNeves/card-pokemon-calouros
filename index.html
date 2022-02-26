@@ -350,14 +350,15 @@
     cartaBotao.style.display = 'flex'
     margem.style.backgroundColor = signos[signo].color
 
-    domtoimage.toPng(margem)
+    domtoimage.toBlob(margem)
     .then(function (dataUrl) {
         let link = document.querySelector("#salvar")
-        // var link=window.URL.createObjectURL(blob);
+        // console.log(dataUrl)
+        var blob = window.URL.createObjectURL(dataUrl);
         // window.location=link;
         // var link = document.createElement('a');
         link.download = 'my-card-pokemon.png';
-        link.href = dataUrl;
+        link.href = blob;
 
         // link.click();
         // link.remove();
