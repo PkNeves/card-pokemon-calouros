@@ -216,14 +216,10 @@
       count += nome.charCodeAt(i)
     }
     let pokemonNumber = count % 151
-    console.log("count: ", count)
-    console.log("pokemonNumber: ", pokemonNumber)
 
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`).then(data => {
-      console.log(data)
-      poemDadosPokemon(data)
-    })
-  }
+    let data = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`)
+    poemDadosPokemon(data)
+    }
 
   function putImage(name) {
     let output = document.querySelector(`#${name}`);
@@ -366,7 +362,7 @@ body {
   width: 40px;
   height: 45px;
   position: absolute;
-  top: 198px;
+  top: 180px;
   right: 45px;
 }
 
