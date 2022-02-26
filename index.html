@@ -147,7 +147,7 @@
     <button onclick="confirma()">Confirmar</button>
   </div>
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
 
 </body>
@@ -348,10 +348,14 @@
   function salvar() {
     var node = document.getElementById('margem');
 
-    domtoimage.toBlob(node)
-    .then(function (blob) {
-        var link=window.URL.createObjectURL(blob);
-        window.location=link;
+    domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        // var link=window.URL.createObjectURL(blob);
+        // window.location=link;
+        var link = document.createElement('a');
+        link.download = 'my-card-pokemon.png';
+        link.href = dataUrl;
+        link.click();
   });
 }
 function voltar() {
