@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <button onclick="salvar()"> Salvar </button>
+    <a id="salvar" class="botao" src=""> Salvar </a>
     <button onclick="voltar()" class="voltar"> Voltar </button>
   </div>
   
@@ -332,33 +332,52 @@
       // put other fields
       let span = document.querySelector(`#${inputs[i].name}`)
       span.innerHTML = inputs[i].value
+
+      // var node = document.getElementById('margem');
+
+    
     }
 
     await pegaDadosPokemon(principalNome)
+    
+
+    for (let i =0; i<atributos.length; i++) {
+      atributos[i].style.backgroundColor = signos[signo].complementar
+    }
+
     // alter visualization
     form.style.display = 'none'
     cartaBotao.style.display = 'flex'
     margem.style.backgroundColor = signos[signo].color
 
-    for (let i =0; i<atributos.length; i++) {
-      atributos[i].style.backgroundColor = signos[signo].complementar
-    }
-  }
-
-  function salvar() {
-    var node = document.getElementById('margem');
-
-    domtoimage.toPng(node)
+    domtoimage.toPng(margem)
     .then(function (dataUrl) {
+        let link = document.querySelector("#salvar")
         // var link=window.URL.createObjectURL(blob);
         // window.location=link;
-        var link = document.createElement('a');
+        // var link = document.createElement('a');
         link.download = 'my-card-pokemon.png';
         link.href = dataUrl;
-        link.click();
-        link.remove();
+
+        // link.click();
+        // link.remove();
   });
-}
+  }
+
+//   function salvar() {
+//     var node = document.getElementById('margem');
+
+//     domtoimage.toPng(node)
+//     .then(function (dataUrl) {
+//         // var link=window.URL.createObjectURL(blob);
+//         // window.location=link;
+//         var link = document.createElement('a');
+//         link.download = 'my-card-pokemon.png';
+//         link.href = dataUrl;
+//         link.click();
+//         link.remove();
+//   });
+// }
 function voltar() {
     let cartaBotao = document.querySelector("#carta-botao")
     let form = document.querySelector("#form-total")
@@ -368,6 +387,19 @@ function voltar() {
 </script>
 
 <style>
+
+.botao {
+  text-align: center;
+  padding: 4px 10px;
+  background-color: #3FDF3F;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.botao:hover {
+  background-color: #3abb3a;
+}
 
 .simples {
   display: none;
@@ -587,6 +619,10 @@ input[type="file"] {
     margin-top: 10px;
     cursor: pointer;
     border-radius: 5px;
+  }
+#label-arquivo:hover {
+  background-color: #cfb54a;
+    
 }
 
 
@@ -604,6 +640,11 @@ button {
   padding: 5px 10px;
   margin: 5px;
   font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(38, 168, 38, 0.863);
 }
 
 hr {
@@ -613,5 +654,17 @@ hr {
 .voltar {
   background-color: #FEE064;
 }
+
+.voltar:hover {
+  background-color: #ddc04a;
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+      color: black;
+      font-weight: 600;
+      font-size: 0.9em;
+ }
 </style>
 
