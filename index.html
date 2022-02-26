@@ -27,7 +27,8 @@
         <div class="atributos-div">
           <div class="atributos-items">
             <div class="atributos">
-              <span> <strong>Pronomes:</strong> <span id="pronomes">Ele \ Dela </span></span>
+              <span class="calouro"> <strong>Pronomes:</strong> <span id="pronomes">Ele \ Dela </span></span>
+              <span class="simples"> <strong>Apelido:</strong> <span id="apelido">Ashezinho </span></span>
               <span><strong>Pokemon:</strong> <span id="pokemon">Pikachu</span></span> 
             </div>
             <div class="atributos">
@@ -46,13 +47,17 @@
             <hr>
             <div class="atributos-2">
               <span> <strong>Cidade:</strong> <span id="cidade">Pokelandia</span> </span>
-              <span> <strong>Orientação Sexual:</strong> <span id="sexual">Pika</span> </span>
-              <span> <strong>Orientação Política:</strong> <span id="politica">Escravidão</span> </span>
+              <span class="calouro"> <strong>Orientação Sexual:</strong> <span id="sexual">Pika</span> </span>
+              <span class="calouro"> <strong>Orientação Política:</strong> <span id="politica">Escravidão</span> </span>
+              <span class="simples"> <strong>Profissão:</strong> <span id="profissao">Batalhador de pokemons</span> </span>
               <span> <strong>Hobbies:</strong> <span id="hobbies">Taca pika no outros</span> </span>
-              <span> <strong>Bebe:</strong> <span id="bebe">Haha</span> </span>
-              <span> <strong>Usa quais drogas:</strong> <span id="drogas">Pokedrogas</span> </span>
+              <span class="calouro"> <strong>Bebe:</strong> <span id="bebe">Haha</span> </span>
+              <span class="calouro"> <strong>Usa quais drogas:</strong> <span id="drogas">Pokedrogas</span> </span>
               <span> <strong>Animes preferidos:</strong> <span id="animes">Digimon</span> </span>
               <span> <strong>Status Relacionamento:</strong> <span id="relacionamento">5x1</span> </span>
+              <hr>
+              <span> <strong>Tipo do pokemon:</strong> <span id="tipos">Água</span> </span>
+              <span> <strong>Habilidades do pokemon:</strong> <span id="habilidades">Dar choque nas pessoas</span> </span>
             </div>
           </div>
         </div>
@@ -69,10 +74,16 @@
       </div>
      
       <div class="form-item">
-        <label>Nome:</label><input type="text" placeholder="Ash" name="nome">
+        <label id="label-formulario">Formulário Calouro</label><button class="voltar" onclick="trocarFormulario()">Trocar Formulário</button>
       </div>
       <div class="form-item">
+        <label>Nome:</label><input type="text" placeholder="Ash" name="nome">
+      </div>
+      <div class="form-item calouro">
         <label>Pronomes:</label><input type="text" placeholder="Ele / Dele" name="pronomes">
+      </div>
+      <div class="form-item simples">
+        <label>Apelido:</label><input type="text" placeholder="Ashezinho" name="apelido">
       </div>
       <div class="form-item">
         <label>@twitter:</label><input type="text" placeholder="@ash_u_gostoso" name="twitter">
@@ -83,22 +94,25 @@
       <div class="form-item">
         <label>Idade:</label><input type="text" placeholder="18" name="idade">
       </div>
+      <div class="form-item simples">
+        <label>Profissão:</label><input type="text" placeholder="Estudante / Programador" name="profissao">
+      </div>
       <div class="form-item">
         <label>Cidade:</label><input type="text" placeholder="Pokelandia" name="cidade">
       </div>
-      <div class="form-item">
+      <div class="form-item calouro">
         <label>Orientação sexual:</label><input type="text" placeholder="Hermafrodita" name="sexual">
       </div>
-      <div class="form-item">
+      <div class="form-item calouro">
         <label>Orientação politica:</label><input type="text" placeholder="Poliglota" name="politica">
       </div>
       <div class="form-item">
         <label>Hobbies:</label><input type="text" placeholder="Taka o pikachu nos outros" name="hobbies">
       </div>
-      <div class="form-item">
+      <div class="form-item calouro">
         <label>Bebe:</label><input type="text" placeholder="Hidromel" name="bebe">
       </div>
-      <div class="form-item">
+      <div class="form-item calouro">
         <label>Usa quais drogas:</label><input type="text" placeholder="Cogumelo do sol" name="drogas">
       </div>
       <div class="form-item">
@@ -140,6 +154,8 @@
 </html>
 
 <script>
+  let formulario = 'calouro'
+
   const signos = {
     "aries": {
       url: "./aries.png",
@@ -203,6 +219,35 @@
   }
   const ids = ['nome', 'img-signo', 'img-pokemon', 'img-character', 'pronome', 'twitter', 'instagram', 'idade', 'cidade', 'sexual', 'politica', 'hobbies', 'bebe', 'drogas', 'animes', 'relacionamento']
   
+  function trocarFormulario() {
+    if (formulario == 'simples') {
+      formulario = 'calouro'
+      let label = document.querySelector("#label-formulario").innerHTML = "Formulário Calouro"
+      let camposSimples = document.querySelectorAll(".simples")
+      let camposCalouros = document.querySelectorAll(".calouro")
+
+      for (let i = 0; i<camposSimples.length; i++) {
+        camposSimples[i].style.display = 'none';
+      }
+      for (let i = 0; i<camposCalouros.length; i++) {
+        camposCalouros[i].style.display = 'block';
+      }
+    } else {
+      formulario = 'simples'
+      let label = document.querySelector("#label-formulario").innerHTML = "Formulário Simples"
+
+      let camposSimples = document.querySelectorAll(".simples")
+      let camposCalouros = document.querySelectorAll(".calouro")
+
+      for (let i = 0; i<camposSimples.length; i++) {
+        camposSimples[i].style.display = 'block';
+      }
+      for (let i = 0; i<camposCalouros.length; i++) {
+        camposCalouros[i].style.display = 'none';
+      }
+    }
+  }
+
   function poemDadosPokemon(dados) {
     if (dados.status != 200) return
     const name = dados.data.name
@@ -210,12 +255,25 @@
     const attack = dados.data.stats[1].base_stat
     const defense = dados.data.stats[2].base_stat
     const img = dados.data.sprites.other.dream_world.front_default
+    const habilidades = dados.data.abilities
+    const tipos = dados.data.types
+    let habilidades_name = ''
+    let tipos_name = ''
+
+    for(let i=0; i<habilidades.length; i++) {
+      habilidades_name += habilidades[i].ability.name + ' / '
+    }
+    for(let i=0; i<tipos.length; i++) {
+      tipos_name += tipos[i].type.name + ' / '
+    }
 
     const htmlName = document.querySelector('#pokemon').innerHTML = name
     const htmlHp = document.querySelector('#hp').innerHTML = hp
     const htmlAttack = document.querySelector('#attack').innerHTML = attack
     const htmlDefense = document.querySelector('#defense').innerHTML = defense
     const htmlImg = document.querySelector('#img-pokemon').src = img
+    const htmlHabilidades = document.querySelector('#habilidades').innerHTML = habilidades_name
+    const htmlTipos = document.querySelector('#tipos').innerHTML = tipos_name
   }
 
   async function pegaDadosPokemon(nome) {
@@ -305,6 +363,10 @@ function voltar() {
 </script>
 
 <style>
+
+.simples {
+  display: none;
+}
 
 @font-face {
     font-family: 'pokemon';
