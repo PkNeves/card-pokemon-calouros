@@ -260,7 +260,8 @@
         continue
       }
       if (campo == 'nome') {
-        principalNome = inputs[i].value
+        principalNome = inputs[i].value == '' ? "Ash" : inputs[i].value
+        inputs[i].value = principalNome
       }
       // put other fields
       let span = document.querySelector(`#${inputs[i].name}`)
