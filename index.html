@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="carta-botao">
+    <div id="margem">
+      <div class="container">
+        <div class="header">
+          <div>
+            <span id="nome"> Ash </span>
+          </div>
+          <div class="signo">
+            <img src="https://cdn-icons.flaticon.com/png/512/5693/premium/5693138.png?token=exp=1645829334~hmac=d44923b2ffb804d1a60dd865cd3f1175" id="img-signo">
+          </div>
+          <div class="pokemon">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" id='img-pokemon'>
+          </div>
+        </div>
+        <div class="img">
+          <img src="https://tm.ibxk.com.br/2016/09/14/14191325611415.jpg" id="img-character">
+        </div>
+        <div class="atributos-div">
+          <div class="atributos-items">
+            <div class="atributos">
+              <span> <strong>Pronomes:</strong> <span id="pronomes">Ele \ Dela </span></span>
+              <span><strong>Pokemon:</strong> <span id="pokemon">Pikachu</span></span> 
+            </div>
+            <div class="atributos">
+              <span> <strong>@twitter:</strong> <span id="twitter">@ash</span> </span>
+              <span> <strong>HP:</strong> <span id="hp">52</span> </span>
+            </div>
+            <div class="atributos">
+              <span> <strong>@instagram:</strong> <span id="instagram">Ash</span> </span>
+              <span> <strong>Attack:</strong> <span id="attack">69</span> </span>
+  
+            </div>
+            <div class="atributos">
+              <span> <strong>Idade:</strong> <span id="idade">13 anos</span> </span>
+              <span> <strong>Defense:</strong> <span id="defense">13</span> </span>
+            </div>
+            <hr>
+            <div class="atributos-2">
+              <span> <strong>Cidade:</strong> <span id="cidade">Pokelandia</span> </span>
+              <span> <strong>Orientação Sexual:</strong> <span id="sexual">Pika</span> </span>
+              <span> <strong>Orientação Política:</strong> <span id="politica">Escravidão</span> </span>
+              <span> <strong>Hobbies:</strong> <span id="hobbies">Taca pika no outros</span> </span>
+              <span> <strong>Bebe:</strong> <span id="bebe">Haha</span> </span>
+              <span> <strong>Usa quais drogas:</strong> <span id="drogas">Pokedrogas</span> </span>
+              <span> <strong>Animes preferidos:</strong> <span id="animes">Digimon</span> </span>
+              <span> <strong>Status Relacionamento:</strong> <span id="relacionamento">5x1</span> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button onclick="salvar()"> Salvar </button>
+    <button onclick="voltar()" class="voltar"> Voltar </button>
+  </div>
+  
+  <div class="form">
+    <div class="form-item">
+      <label>Image:</label><input type="file" name='img-character' size="40"> 
+    </div>
+    <div class="form-item">
+      <label>Signo:</label><select id='select-img-signo'>
+          <option value="aries">Aries</option>
+          <option value="touro">Touro</option>
+          <option value="gemeos">Gemeos</option>
+          <option value="cancer">Cancer</option>
+          <option value="leao">Leao</option>
+          <option value="virgem">Virgem</option>
+          <option value="libra">Libra</option>
+          <option value="escorpiao">Escorpiao</option>
+          <option value="sargitario">Sargitario</option>
+          <option value="capricornio">Capricornio</option>
+          <option value="aquario">Aquario</option>
+          <option value="peixes">Peixes</option>
+        </select>
+    </div>
+    <div class="form-item">
+      <label>Nome:</label><input type="text" placeholder="Ash" name="nome">
+    </div>
+    <div class="form-item">
+      <label>Pronomes:</label><input type="text" placeholder="Ele / Dele" name="pronomes">
+    </div>
+    <div class="form-item">
+      <label>@twitter:</label><input type="text" placeholder="@ash_u_gostoso" name="twitter">
+    </div>
+    <div class="form-item">
+      <label>@instagram:</label><input type="text" placeholder="@ash_u_gostoso_2015" name="instagram">
+    </div>
+    <div class="form-item">
+      <label>Idade:</label><input type="number" placeholder="18" name="idade">
+    </div>
+    <div class="form-item">
+      <label>Cidade:</label><input type="text" placeholder="Pokelandia" name="cidade">
+    </div>
+    <div class="form-item">
+      <label>Orientação sexual:</label><input type="text" placeholder="Emafrodita" name="sexual">
+    </div>
+    <div class="form-item">
+      <label>Orientação politica:</label><input type="text" placeholder="Poliglota" name="politica">
+    </div>
+    <div class="form-item">
+      <label>Hobbies:</label><input type="text" placeholder="Taka o pikachu nos outros" name="hobbies">
+    </div>
+    <div class="form-item">
+      <label>Bebe:</label><input type="text" placeholder="Hidromel" name="bebe">
+    </div>
+    <div class="form-item">
+      <label>Usa quais drogas:</label><input type="text" placeholder="Cogumelo do sol" name="drogas">
+    </div>
+    <div class="form-item">
+      <label>Animes preferidos:</label><input type="text" placeholder="Digimon" name="animes">
+    </div>
+    <div class="form-item">
+      <label>Relacionamento:</label><input type="text" placeholder="5x1" name="relacionamento">
+    </div>
+    <button onclick="confirma()">Confirmar</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
+
+</body>
+</html>
+
+<script>
+  const signos = {
+    "aries": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693122.png?token=exp=1645829334~hmac=3168b9cdbbdf08b5c31443e966ea401b",
+    "touro": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693582.png?token=exp=1645829334~hmac=ca4c417085d5ed617980f8e0b5b54170",
+    "gemeos": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693223.png?token=exp=1645829334~hmac=5df026c87014c2b3edfbfa0f77056bf6",
+    "cancer": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693138.png?token=exp=1645829334~hmac=d44923b2ffb804d1a60dd865cd3f1175",
+    "leao": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693253.png?token=exp=1645829334~hmac=a10cd2d46920a4f159d149d69245898f",
+    "virgem": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693631.png?token=exp=1645829334~hmac=800e604b2b52e26e3fad9d6ec9755863",
+    "libra": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693265.png?token=exp=1645829334~hmac=e48c07a2cd6070dcdeaa76b03cad17d0",
+    "escorpiao": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693443.png?token=exp=1645829334~hmac=6820caad86c3f6acd50b305e9250bf38",
+    "sargitario": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693413.png?token=exp=1645829334~hmac=f7aad5562b65f45c484ed41ce217de4b",
+    "capricornio": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693146.png?token=exp=1645829334~hmac=0c7eed3853cf6e63619ce2b8f1721d6d",
+    "aquario": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693115.png?token=exp=1645829334~hmac=e432e766a0f4018606d4e81cf1255681",
+    "peixes": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693365.png?token=exp=1645829334~hmac=8ea957984c9505f1639734fa676f7814" 
+  }
+  const ids = ['nome', 'img-signo', 'img-pokemon', 'img-character', 'pronome', 'twitter', 'instagram', 'idade', 'cidade', 'sexual', 'politica', 'hobbies', 'bebe', 'drogas', 'animes', 'relacionamento']
+  
+  function poemDadosPokemon(dados) {
+    if (dados.status != 200) return
+    const name = dados.data.name
+    const hp = dados.data.stats[0].base_stat
+    const attack = dados.data.stats[1].base_stat
+    const defense = dados.data.stats[2].base_stat
+    const img = dados.data.sprites.other.dream_world.front_default
+
+    const htmlName = document.querySelector('#pokemon').innerHTML = name
+    const htmlHp = document.querySelector('#hp').innerHTML = hp
+    const htmlAttack = document.querySelector('#attack').innerHTML = attack
+    const htmlDefense = document.querySelector('#defense').innerHTML = defense
+    const htmlImg = document.querySelector('#img-pokemon').src = img
+  }
+
+  async function pegaDadosPokemon(nome) {
+    nome = nome.toLowerCase()
+    nome = nome.replace(/\s/g, '')
+    let count = 0
+    for (let i = 0; i<nome.length; i++) {
+      count += nome.charCodeAt(i)
+    }
+    let pokemonNumber = count % 151
+    console.log("count: ", count)
+    console.log("pokemonNumber: ", pokemonNumber)
+
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`).then(data => {
+      console.log(data)
+      poemDadosPokemon(data)
+    })
+  }
+
+  function putImage(name) {
+    let output = document.querySelector(`#${name}`);
+    let event = document.querySelector(`input[name=${name}]`)
+    output.src = URL.createObjectURL(event.files[0]);
+    // output.onload = function() {
+    //   URL.revokeObjectURL(output.src) // free memory
+  // };
+  }
+
+  async function confirma() {
+    let cartaBotao = document.querySelector("#carta-botao")
+    let form = document.querySelector(".form")
+    let inputs = form.querySelectorAll('input')
+    let principalNome = '';
+
+    // put signo image
+    let select = form.querySelector("#select-img-signo")
+    let signo = select.value;
+    if (signo != '') {
+      let imgSigno = document.querySelector('#img-signo')
+      imgSigno.src = signos[signo]
+    }
+    
+    for (let i=0; i<inputs.length; i++) {
+      let campo = inputs[i].name
+      // put character image
+      if (campo === 'img-character') {
+        if (inputs[i].files.length > 0) {
+          putImage('img-character')
+        }
+        continue
+      }
+      if (campo == 'nome') {
+        principalNome = inputs[i].value
+      }
+      // put other fields
+      let span = document.querySelector(`#${inputs[i].name}`)
+      span.innerHTML = inputs[i].value
+    }
+
+    await pegaDadosPokemon(principalNome)
+    // alter visualization
+    form.style.display = 'none'
+    cartaBotao.style.display = 'flex'
+  }
+
+  function salvar() {
+    var node = document.getElementById('margem');
+
+    domtoimage.toBlob(node)
+    .then(function (blob) {
+        var link=window.URL.createObjectURL(blob);
+        window.location=link;
+  });
+
+  function voltar() {
+    let cartaBotao = document.querySelector("#carta-botao")
+    let form = document.querySelector(".form")
+    form.style.display = 'flex'
+    cartaBotao.style.display = 'none'
+  }
+
+  
+}
+</script>
+
+<style>
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#carta-botao {
+  display: none;
+  flex-direction: column;
+  width: 400px;
+}
+
+#margem {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  border: 7px solid #FEE064;
+  width: 400px;
+  border-radius: 5px;
+  background-color: #D75A95;
+  box-shadow: inset 1px 1px 130px black;
+
+}
+
+.container {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: start;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > div > span {
+  font-size: 2em;
+  color: white;
+}
+
+.signo {
+  position: absolute;
+  top: 30px;
+  right: 13px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid grey;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+}
+
+.signo > img {
+  width: 100%;
+  height: 100%;
+}
+
+.pokemon {
+  padding-right: 15px;
+  width: 40px;
+  height: 45px;
+  position: absolute;
+  top: 198px;
+  right: 45px;
+}
+
+.pokemon > img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.img {
+  padding: 0;
+  margin: 0;
+  border: 5px solid grey;
+  background-color: white;
+  height: 200px;
+  width: 100%;
+}
+
+.img img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 200px;
+}
+
+.atributos-div {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.atributos-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.atributos {
+  padding: 4px 10px;
+  margin: 2px;
+  background-color: #FEE064;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: inset 0 0 15px black;
+}
+
+.atributos-2 {
+  padding: 10px 10px;
+  margin: 2px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: inset 0 0 15px black;
+}
+
+.form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: end;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  border: 7px solid #FEE064;
+  width: 400px;
+  border-radius: 5px;
+  background-color: #D75A95;
+  box-shadow: inset 1px 1px 130px black;
+}
+
+input , select {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 3px 10px;
+}
+
+label {
+  font-weight: 900;
+}
+
+button {
+  background-color: rgba(32, 218, 32, 0.863);
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-weight: 600;
+}
+
+hr {
+  width: 100%;
+}
+
+.voltar {
+  background-color: #FEE064;
+}
+</style>
+
