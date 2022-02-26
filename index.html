@@ -15,14 +15,14 @@
             <span id="nome"> Ash </span>
           </div>
           <div class="signo">
-            <img src="https://cdn-icons.flaticon.com/png/512/5693/premium/5693138.png?token=exp=1645829334~hmac=d44923b2ffb804d1a60dd865cd3f1175" id="img-signo">
+            <img src="./aries.png" id="img-signo">
           </div>
           <div class="pokemon">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" id='img-pokemon'>
           </div>
         </div>
         <div class="img">
-          <img src="https://tm.ibxk.com.br/2016/09/14/14191325611415.jpg" id="img-character">
+          <img src="./ash.jpg" id="img-character">
         </div>
         <div class="atributos-div">
           <div class="atributos-items">
@@ -76,7 +76,7 @@
           <option value="virgem">Virgem</option>
           <option value="libra">Libra</option>
           <option value="escorpiao">Escorpiao</option>
-          <option value="sargitario">Sargitario</option>
+          <option value="sagitario">Sagitario</option>
           <option value="capricornio">Capricornio</option>
           <option value="aquario">Aquario</option>
           <option value="peixes">Peixes</option>
@@ -131,18 +131,65 @@
 
 <script>
   const signos = {
-    "aries": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693122.png?token=exp=1645829334~hmac=3168b9cdbbdf08b5c31443e966ea401b",
-    "touro": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693582.png?token=exp=1645829334~hmac=ca4c417085d5ed617980f8e0b5b54170",
-    "gemeos": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693223.png?token=exp=1645829334~hmac=5df026c87014c2b3edfbfa0f77056bf6",
-    "cancer": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693138.png?token=exp=1645829334~hmac=d44923b2ffb804d1a60dd865cd3f1175",
-    "leao": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693253.png?token=exp=1645829334~hmac=a10cd2d46920a4f159d149d69245898f",
-    "virgem": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693631.png?token=exp=1645829334~hmac=800e604b2b52e26e3fad9d6ec9755863",
-    "libra": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693265.png?token=exp=1645829334~hmac=e48c07a2cd6070dcdeaa76b03cad17d0",
-    "escorpiao": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693443.png?token=exp=1645829334~hmac=6820caad86c3f6acd50b305e9250bf38",
-    "sargitario": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693413.png?token=exp=1645829334~hmac=f7aad5562b65f45c484ed41ce217de4b",
-    "capricornio": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693146.png?token=exp=1645829334~hmac=0c7eed3853cf6e63619ce2b8f1721d6d",
-    "aquario": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693115.png?token=exp=1645829334~hmac=e432e766a0f4018606d4e81cf1255681",
-    "peixes": "https://cdn-icons.flaticon.com/png/512/5693/premium/5693365.png?token=exp=1645829334~hmac=8ea957984c9505f1639734fa676f7814" 
+    "aries": {
+      url: "./aries.png",
+      color: "#F30D0D",
+      complementar: "#01adff",
+    },
+    "touro": {
+      url: "./touro.png",
+      color: "#D879F2",
+      complementar: "#91da97",
+    },
+    "gemeos": {
+      url: "./gemeos.png",
+      color: "#FFD93B",
+      complementar: "#3be9ff",
+    },
+    "cancer": {
+      url: "./cancer.png",
+      color: "#FFFFFF",
+      complementar: "fa7f72",
+    },
+    "leao": {
+      url: "./leao.png",
+      color: "#FF7A28",
+    },
+    "virgem": {
+      url: "./virgem.png",
+      color: "#80F74D",
+      complementar: "#f08080",
+    },
+    "libra": {
+      url: "./libra.png",
+      color: "#FF81D0",
+      complementar: "#81ffd8",
+    },
+    "escorpiao": {
+      url: "./escorpiao.png",
+      color: "#6C2A2C",
+      complementar: "#9f6d6b"
+    },
+    "sagitario": {
+      url: "./sagitario.png",
+      color: "#3E0A52",
+      complementar: "#b8860b"
+    },
+    "capricornio": {
+      url: "./capricornio.png",
+      color: "#020003",
+      complementar: "#fffff0",
+    },
+    "aquario": {
+      url: "./aquario.png",
+      color: "#1561C9",
+      complementar: "#c5de00"
+    },
+    "peixes": {
+      url: "./peixes.png",
+      color: "#6BA2F2",
+      complementar: "#cfc48e"
+    }
   }
   const ids = ['nome', 'img-signo', 'img-pokemon', 'img-character', 'pronome', 'twitter', 'instagram', 'idade', 'cidade', 'sexual', 'politica', 'hobbies', 'bebe', 'drogas', 'animes', 'relacionamento']
   
@@ -189,6 +236,8 @@
 
   async function confirma() {
     let cartaBotao = document.querySelector("#carta-botao")
+    let margem = document.querySelector("#margem")
+    let atributos = document.querySelectorAll(".atributos")
     let form = document.querySelector(".form")
     let inputs = form.querySelectorAll('input')
     let principalNome = '';
@@ -198,7 +247,7 @@
     let signo = select.value;
     if (signo != '') {
       let imgSigno = document.querySelector('#img-signo')
-      imgSigno.src = signos[signo]
+      imgSigno.src = signos[signo].url
     }
     
     for (let i=0; i<inputs.length; i++) {
@@ -222,6 +271,11 @@
     // alter visualization
     form.style.display = 'none'
     cartaBotao.style.display = 'flex'
+    margem.style.backgroundColor = signos[signo].color
+
+    for (let i =0; i<atributos.length; i++) {
+      atributos[i].style.backgroundColor = signos[signo].complementar
+    }
   }
 
   function salvar() {
@@ -232,16 +286,13 @@
         var link=window.URL.createObjectURL(blob);
         window.location=link;
   });
-
-  function voltar() {
+}
+function voltar() {
     let cartaBotao = document.querySelector("#carta-botao")
     let form = document.querySelector(".form")
     form.style.display = 'flex'
     cartaBotao.style.display = 'none'
   }
-
-  
-}
 </script>
 
 <style>
