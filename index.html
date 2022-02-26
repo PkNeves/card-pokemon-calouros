@@ -62,67 +62,75 @@
     <button onclick="voltar()" class="voltar"> Voltar </button>
   </div>
   
-  <div class="form">
-    <div class="form-item">
-      <label id="label-arquivo" for="arquivo">Sua Imagem:</label><input type="file" name='img-character' id="arquivo"> 
-    </div>
-    <div class="form-item">
-      <label>Signo:</label><select id='select-img-signo'>
-          <option value="aries">Aries</option>
-          <option value="touro">Touro</option>
-          <option value="gemeos">Gemeos</option>
-          <option value="cancer">Cancer</option>
-          <option value="leao">Leao</option>
-          <option value="virgem">Virgem</option>
-          <option value="libra">Libra</option>
-          <option value="escorpiao">Escorpiao</option>
-          <option value="sagitario">Sagitario</option>
-          <option value="capricornio">Capricornio</option>
-          <option value="aquario">Aquario</option>
-          <option value="peixes">Peixes</option>
-        </select>
-    </div>
-    <div class="form-item">
-      <label>Nome:</label><input type="text" placeholder="Ash" name="nome">
-    </div>
-    <div class="form-item">
-      <label>Pronomes:</label><input type="text" placeholder="Ele / Dele" name="pronomes">
-    </div>
-    <div class="form-item">
-      <label>@twitter:</label><input type="text" placeholder="@ash_u_gostoso" name="twitter">
-    </div>
-    <div class="form-item">
-      <label>@instagram:</label><input type="text" placeholder="@ash_u_gostoso_2015" name="instagram">
-    </div>
-    <div class="form-item">
-      <label>Idade:</label><input type="number" placeholder="18" name="idade">
-    </div>
-    <div class="form-item">
-      <label>Cidade:</label><input type="text" placeholder="Pokelandia" name="cidade">
-    </div>
-    <div class="form-item">
-      <label>Orientação sexual:</label><input type="text" placeholder="Hermafrodita" name="sexual">
-    </div>
-    <div class="form-item">
-      <label>Orientação politica:</label><input type="text" placeholder="Poliglota" name="politica">
-    </div>
-    <div class="form-item">
-      <label>Hobbies:</label><input type="text" placeholder="Taka o pikachu nos outros" name="hobbies">
-    </div>
-    <div class="form-item">
-      <label>Bebe:</label><input type="text" placeholder="Hidromel" name="bebe">
-    </div>
-    <div class="form-item">
-      <label>Usa quais drogas:</label><input type="text" placeholder="Cogumelo do sol" name="drogas">
-    </div>
-    <div class="form-item">
-      <label>Animes preferidos:</label><input type="text" placeholder="Digimon" name="animes">
-    </div>
-    <div class="form-item">
-      <label>Relacionamento:</label><input type="text" placeholder="5x1" name="relacionamento">
+  <div id="form-total">
+    <div class="form">
+      <div class="form-item">
+        <label id="label-arquivo" for="arquivo">Sua Imagem:</label><input type="file" name='img-character' id="arquivo"> 
+      </div>
+      <div class="form-item">
+        <label>Signo:</label><select id='select-img-signo'>
+            <option value="aries">Aries</option>
+            <option value="touro">Touro</option>
+            <option value="gemeos">Gemeos</option>
+            <option value="cancer">Cancer</option>
+            <option value="leao">Leao</option>
+            <option value="virgem">Virgem</option>
+            <option value="libra">Libra</option>
+            <option value="escorpiao">Escorpiao</option>
+            <option value="sagitario">Sagitario</option>
+            <option value="capricornio">Capricornio</option>
+            <option value="aquario">Aquario</option>
+            <option value="peixes">Peixes</option>
+          </select>
+      </div>
+      <div class="form-item">
+        <label>Nome:</label><input type="text" placeholder="Ash" name="nome">
+      </div>
+      <div class="form-item">
+        <label>Pronomes:</label><input type="text" placeholder="Ele / Dele" name="pronomes">
+      </div>
+      <div class="form-item">
+        <label>@twitter:</label><input type="text" placeholder="@ash_u_gostoso" name="twitter">
+      </div>
+      <div class="form-item">
+        <label>@instagram:</label><input type="text" placeholder="@ash_u_gostoso_2015" name="instagram">
+      </div>
+      <div class="form-item">
+        <label>Idade:</label><input type="number" placeholder="18" name="idade">
+      </div>
+      <div class="form-item">
+        <label>Cidade:</label><input type="text" placeholder="Pokelandia" name="cidade">
+      </div>
+      <div class="form-item">
+        <label>Orientação sexual:</label><input type="text" placeholder="Hermafrodita" name="sexual">
+      </div>
+      <div class="form-item">
+        <label>Orientação politica:</label><input type="text" placeholder="Poliglota" name="politica">
+      </div>
+      <div class="form-item">
+        <label>Hobbies:</label><input type="text" placeholder="Taka o pikachu nos outros" name="hobbies">
+      </div>
+      <div class="form-item">
+        <label>Bebe:</label><input type="text" placeholder="Hidromel" name="bebe">
+      </div>
+      <div class="form-item">
+        <label>Usa quais drogas:</label><input type="text" placeholder="Cogumelo do sol" name="drogas">
+      </div>
+      <div class="form-item">
+        <label>Animes preferidos:</label><input type="text" placeholder="Digimon" name="animes">
+      </div>
+      <div class="form-item">
+        <label>Relacionamento:</label><input type="text" placeholder="5x1" name="relacionamento">
+      </div>
+      <div class="social">
+        <a href="https://www.instagram.com/pettersonk/" target="_blank"><img class="social-icon" src="./instagram.png"></a>
+        <a href="https://www.linkedin.com/in/petterson-neves-62051a129/" target="_blank"><img class="social-icon" src="./linkedin.png"></a>
+        <a href="https://github.com/PkNeves" target="_blank"><img class="social-icon" src="./github.png"></a>
+      </div>
     </div>
     <button onclick="confirma()">Confirmar</button>
   </div>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
 
@@ -234,7 +242,7 @@
     let cartaBotao = document.querySelector("#carta-botao")
     let margem = document.querySelector("#margem")
     let atributos = document.querySelectorAll(".atributos")
-    let form = document.querySelector(".form")
+    let form = document.querySelector("#form-total")
     let inputs = form.querySelectorAll('input')
     let principalNome = '';
 
@@ -286,7 +294,7 @@
 }
 function voltar() {
     let cartaBotao = document.querySelector("#carta-botao")
-    let form = document.querySelector(".form")
+    let form = document.querySelector("#form-total")
     form.style.display = 'flex'
     cartaBotao.style.display = 'none'
   }
@@ -303,7 +311,8 @@ body {
 #carta-botao {
   display: none;
   flex-direction: column;
-  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
 }
 
 #margem {
@@ -311,7 +320,8 @@ body {
   margin: 0;
   position: relative;
   border: 7px solid #FEE064;
-  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
   border-radius: 5px;
   background-color: #D75A95;
   box-shadow: inset 1px 1px 130px black;
@@ -423,6 +433,13 @@ body {
   box-shadow: inset 0 0 15px black;
 }
 
+#form-total {
+  min-width: 400px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
 .form {
   padding: 10px;
   display: flex;
@@ -433,10 +450,24 @@ body {
   margin: 0;
   position: relative;
   border: 7px solid #FEE064;
-  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
   border-radius: 5px;
   background-color: #D75A95;
   box-shadow: inset 1px 1px 130px black;
+}
+
+.social {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
 }
 
 input , select {
@@ -461,6 +492,7 @@ input[type="file"] {
     cursor: pointer;
     border-radius: 5px;
 }
+
 
 label {
   font-weight: 900;
