@@ -67,25 +67,7 @@
       <div class="title">
         <h2> Descubra qual pokemon combina com seu nome </h2>
       </div>
-      <div class="form-item">
-        <label id="label-arquivo" for="arquivo">Sua Imagem:</label><input type="file" name='img-character' id="arquivo"> 
-      </div>
-      <div class="form-item">
-        <label>Signo:</label><select id='select-img-signo'>
-            <option value="aries">Aries</option>
-            <option value="touro">Touro</option>
-            <option value="gemeos">Gemeos</option>
-            <option value="cancer">Cancer</option>
-            <option value="leao">Leao</option>
-            <option value="virgem">Virgem</option>
-            <option value="libra">Libra</option>
-            <option value="escorpiao">Escorpiao</option>
-            <option value="sagitario">Sagitario</option>
-            <option value="capricornio">Capricornio</option>
-            <option value="aquario">Aquario</option>
-            <option value="peixes">Peixes</option>
-          </select>
-      </div>
+     
       <div class="form-item">
         <label>Nome:</label><input type="text" placeholder="Ash" name="nome">
       </div>
@@ -125,6 +107,23 @@
       <div class="form-item">
         <label>Relacionamento:</label><input type="text" placeholder="5x1" name="relacionamento">
       </div>
+      <div class="form-item">
+        <label>Signo:</label><select id='select-img-signo'>
+            <option value="aries">Aries</option>
+            <option value="touro">Touro</option>
+            <option value="gemeos">Gemeos</option>
+            <option value="cancer">Cancer</option>
+            <option value="leao">Leao</option>
+            <option value="virgem">Virgem</option>
+            <option value="libra">Libra</option>
+            <option value="escorpiao">Escorpiao</option>
+            <option value="sagitario">Sagitario</option>
+            <option value="capricornio">Capricornio</option>
+            <option value="aquario">Aquario</option>
+            <option value="peixes">Peixes</option>
+          </select>
+      </div>
+        <label id="label-arquivo" for="arquivo">Sua Imagem:</label><input type="file" name='img-character' id="arquivo"> 
       <div class="social">
         <a href="https://www.instagram.com/pettersonk/" target="_blank"><img class="social-icon" src="./instagram.png"></a>
         <a href="https://www.linkedin.com/in/petterson-neves-62051a129/" target="_blank"><img class="social-icon" src="./linkedin.png"></a>
@@ -396,7 +395,7 @@ body {
   width: 40px;
   height: 45px;
   position: absolute;
-  top: 180px;
+  top: 210px;
   right: 45px;
 }
 
@@ -412,7 +411,7 @@ body {
   margin: 0;
   border: 5px solid grey;
   background-color: white;
-  height: 200px;
+  height: 250px;
   width: 100%;
 }
 
@@ -420,7 +419,7 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -511,7 +510,7 @@ input[type="file"] {
 #label-arquivo {
     margin: 10px;
     padding: 10px 10px;
-    width: 120px;
+    width: 90%;
     background-color: #FEE064;
     text-transform: uppercase;
     text-align: center;
@@ -524,6 +523,10 @@ input[type="file"] {
 
 label {
   font-weight: 900;
+}
+
+select {
+  width: 185px;
 }
 
 button {
