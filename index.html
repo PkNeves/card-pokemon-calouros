@@ -64,7 +64,7 @@
   
   <div class="form">
     <div class="form-item">
-      <label>Image:</label><input type="file" name='img-character' size="40"> 
+      <label id="label-arquivo" for="arquivo">Sua Imagem:</label><input type="file" name='img-character' id="arquivo"> 
     </div>
     <div class="form-item">
       <label>Signo:</label><select id='select-img-signo'>
@@ -443,6 +443,23 @@ input , select {
   margin: 5px;
   border-radius: 10px;
   padding: 3px 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#label-arquivo {
+    margin: 10px;
+    padding: 10px 10px;
+    width: 120px;
+    background-color: #FEE064;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 label {
