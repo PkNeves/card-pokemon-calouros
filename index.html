@@ -310,6 +310,7 @@
     let form = document.querySelector("#form-total")
     let inputs = form.querySelectorAll('input')
     let principalNome = '';
+    let idade = '';
 
     // put signo image
     let select = form.querySelector("#select-img-signo")
@@ -331,6 +332,8 @@
       if (campo == 'nome') {
         principalNome = inputs[i].value == '' ? "Ash" : inputs[i].value
         inputs[i].value = principalNome
+      } else if (campo == 'idade') {
+        idade = inputs[i].value
       } else {
         inputs[i].value = inputs[i].value == '' ? "-" : inputs[i].value
       }
@@ -343,7 +346,9 @@
     
     }
 
-    await pegaDadosPokemon(principalNome)
+    let combinacao = principalNome+idade
+
+    await pegaDadosPokemon(combinacao)
     
 
     for (let i =0; i<atributos.length; i++) {
