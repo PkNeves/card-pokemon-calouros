@@ -12,7 +12,7 @@
       <div class="container">
         <div class="header">
           <div>
-            <span id="nome"> Ash </span>
+            <span translate="no" id="nome"> Ash </span>
           </div>
           <div class="signo">
             <img src="./aries.png" id="img-signo">
@@ -27,37 +27,37 @@
         <div class="atributos-div">
           <div class="atributos-items">
             <div class="atributos">
-              <span class="calouro"> <strong>Pronomes:</strong> <span id="pronomes">Ele \ Dela </span></span>
-              <span class="simples"> <strong>Apelido:</strong> <span id="apelido">Ashezinho </span></span>
-              <span><strong>Pokemon:</strong> <span id="pokemon">Pikachu</span></span> 
+              <span class="calouro"> <strong>Pronomes:</strong> <span id="pronomes" translate="no">Ele \ Dela </span></span>
+              <span class="simples"> <strong>Apelido:</strong> <span id="apelido" translate="no">Ashezinho </span></span>
+              <span><strong>Pokemon:</strong> <span id="pokemon" translate="no">Pikachu</span></span> 
             </div>
             <div class="atributos">
-              <span> <strong>@twitter:</strong> <span id="twitter">@ash</span> </span>
-              <span> <strong>HP:</strong> <span id="hp">52</span> </span>
+              <span> <strong>@twitter:</strong> <span id="twitter" translate="no">@ash</span> </span>
+              <span> <strong>HP:</strong> <span id="hp" translate="no">52</span> </span>
             </div>
             <div class="atributos">
-              <span> <strong>@instagram:</strong> <span id="instagram">Ash</span> </span>
-              <span> <strong>Attack:</strong> <span id="attack">69</span> </span>
+              <span> <strong>@instagram:</strong> <span id="instagram" translate="no">Ash</span> </span>
+              <span> <strong>Attack:</strong> <span id="attack" translate="no">69</span> </span>
   
             </div>
             <div class="atributos">
-              <span> <strong>Idade:</strong> <span id="idade">13 anos</span> </span>
-              <span> <strong>Defense:</strong> <span id="defense">13</span> </span>
+              <span> <strong>Idade:</strong> <span id="idade" translate="no">13 anos</span> </span>
+              <span> <strong>Defense:</strong> <span id="defense" translate="no">13</span> </span>
             </div>
             <hr>
             <div class="atributos-2">
-              <span> <strong>Cidade:</strong> <span id="cidade">Pokelandia</span> </span>
-              <span class="calouro"> <strong>Orientação Sexual:</strong> <span id="sexual">Nada a declarar</span> </span>
-              <span class="calouro"> <strong>Orientação Política:</strong> <span id="politica">Escravidão de pokemon</span> </span>
-              <span class="simples"> <strong>Profissão:</strong> <span id="profissao">Batalhador de pokemons</span> </span>
-              <span> <strong>Hobbies:</strong> <span id="hobbies">Tacar o pikachu nos outros</span> </span>
-              <span class="calouro"> <strong>Bebe:</strong> <span id="bebe">Agua que o pidgey não bebe</span> </span>
-              <span class="calouro"> <strong>Usa quais drogas:</strong> <span id="drogas">Erva de gato</span> </span>
-              <span> <strong>Animes preferidos:</strong> <span id="animes">Digimon</span> </span>
-              <span> <strong>Status Relacionamento:</strong> <span id="relacionamento">Enrolado</span> </span>
+              <span> <strong>Cidade:</strong> <span id="cidade" translate="no">Pokelandia</span> </span>
+              <span class="calouro"> <strong>Orientação Sexual:</strong> <span id="sexual" translate="no">Nada a declarar</span> </span>
+              <span class="calouro"> <strong>Orientação Política:</strong> <span id="politica" translate="no">Escravidão de pokemon</span> </span>
+              <span class="simples"> <strong>Profissão:</strong> <span id="profissao" translate="no">Batalhador de pokemons</span> </span>
+              <span> <strong>Hobbies:</strong> <span id="hobbies" translate="no">Tacar o pikachu nos outros</span> </span>
+              <span class="calouro"> <strong>Bebe:</strong> <span id="bebe" translate="no">Agua que o pidgey não bebe</span> </span>
+              <span class="calouro"> <strong>Usa quais drogas:</strong> <span id="drogas" translate="no">Erva de gato</span> </span>
+              <span> <strong>Animes preferidos:</strong> <span id="animes" translate="no">Digimon</span> </span>
+              <span> <strong>Status Relacionamento:</strong> <span id="relacionamento" translate="no">Enrolado</span> </span>
               <hr>
-              <span> <strong>Tipo do pokemon:</strong> <span id="tipos">Água</span> </span>
-              <span> <strong>Habilidades do pokemon:</strong> <span id="habilidades">Dar choque nas pessoas</span> </span>
+              <span> <strong>Tipo do pokemon:</strong> <span id="tipos" translate="no">Água</span> </span>
+              <span> <strong>Habilidades do pokemon:</strong> <span id="habilidades" translate="no">Dar choque nas pessoas</span> </span>
             </div>
           </div>
         </div>
@@ -68,6 +68,7 @@
   </div>
   
   <div id="form-total">
+    <div id="google_translate_element"></div>
     <div class="form">
       <div class="title">
         <h2> Descubra qual pokemon combina com seu nome </h2>
@@ -149,11 +150,15 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
 
 <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'pt-br'}, 'google_translate_element');
+  }
   let formulario = 'calouro'
 
   const signos = {
