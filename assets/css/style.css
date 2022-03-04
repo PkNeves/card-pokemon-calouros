@@ -1,0 +1,290 @@
+
+.botao {
+  text-align: center;
+  padding: 4px 10px;
+  background-color: #3FDF3F;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.botao:hover {
+  background-color: #3abb3a;
+}
+
+.simples {
+  display: none;
+}
+
+@font-face {
+    font-family: 'pokemon';
+    src: url('./PokemonSolid.ttf');
+}
+
+.title {
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: pokemon;
+  margin-left: 40px;
+  text-shadow: 1px 1px 2px rgb(204, 191, 133);
+  color: rgb(6, 46, 179);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#carta-botao {
+  display: none;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 400px;
+}
+
+#margem {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  border: 7px solid #FEE064;
+  min-width: 400px;
+  max-width: 400px;
+  border-radius: 5px;
+  background-color: #D75A95;
+  box-shadow: inset 1px 1px 130px black;
+
+}
+
+.container {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: start;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > div > span {
+  font-size: 2em;
+  color: white;
+}
+
+.signo {
+  position: absolute;
+  top: 30px;
+  right: 13px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid grey;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+}
+
+.signo > img {
+  width: 100%;
+  height: 100%;
+}
+
+.pokemon {
+  padding-right: 15px;
+  width: 40px;
+  height: 45px;
+  position: absolute;
+  top: 210px;
+  right: 45px;
+}
+
+.pokemon > img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.img {
+  padding: 0;
+  margin: 0;
+  border: 5px solid grey;
+  background-color: white;
+  height: 250px;
+  width: 100%;
+}
+
+.img img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 45%;
+}
+
+.atributos-div {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.atributos-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.atributos {
+  padding: 4px 10px;
+  margin: 2px;
+  background-color: #FEE064;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: inset 0 0 15px black;
+}
+
+.atributos-2 {
+  width: 93%;
+  padding: 10px 10px;
+  margin: 2px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: inset 0 0 15px black;
+}
+
+#form-total {
+  min-width: 400px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  align-items: end;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  /* border: 7px solid #FEE064; */
+  min-width: 400px;
+  max-width: 400px;
+  border-radius: 5px;
+  background-color: #A5CDFF;
+  /* box-shadow: inset 1px 1px 130px black; */
+}
+
+.form-item {
+  margin: auto;
+}
+
+.form-button {
+  background-color: white;
+  color: #18467F;
+}
+
+.form-button-active {
+  background-color: #18467F;
+  color: white;
+}
+
+.social {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+input , select {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 3px 10px;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#label-arquivo {
+    margin: 10px;
+    padding: 10px 10px;
+    width: 90%;
+    background-color: #FEE064;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+#label-arquivo:hover {
+  background-color: #cfb54a;
+    
+}
+
+
+label {
+  font-weight: 900;
+}
+
+select {
+  width: 185px;
+}
+
+button {
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+hr {
+  width: 100%;
+}
+
+.voltar {
+  background-color: #FEE064;
+}
+
+.voltar:hover {
+  background-color: #ddc04a;
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+      color: black;
+      font-weight: 600;
+      font-size: 0.9em;
+      cursor: pointer;
+ }
