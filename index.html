@@ -71,11 +71,12 @@
     <div id="google_translate_element"></div>
     <div class="form">
       <div class="title">
-        <h2> Descubra qual pokemon combina com seu nome </h2>
+        <img src="./title.png">
       </div>
      
       <div class="form-item">
-        <label id="label-formulario">Formulário Calouro</label><button class="voltar" onclick="trocarFormulario()">Trocar Formulário</button>
+       <button class="form-button" onclick="trocarFormulario()">Formulario Simples</button>
+       <button class="form-button-active" onclick="trocarFormulario()">Formulario Calouro</button>
       </div>
       <div class="form-item">
         <label>Nome:</label><input type="text" placeholder="Ash" name="nome">
@@ -259,6 +260,7 @@
     const hp = dados.data.stats[0].base_stat
     const attack = dados.data.stats[1].base_stat
     const defense = dados.data.stats[2].base_stat
+    // const img = dados.data.sprites.other['official-artwork'].front_default
     const img = dados.data.sprites.other.dream_world.front_default
     const habilidades = dados.data.abilities
     const tipos = dados.data.types
@@ -421,10 +423,9 @@ function voltar() {
 }
 
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -578,17 +579,31 @@ body {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   align-items: end;
   box-sizing: border-box;
   margin: 0;
   position: relative;
-  border: 7px solid #FEE064;
+  /* border: 7px solid #FEE064; */
   min-width: 400px;
   max-width: 400px;
   border-radius: 5px;
-  background-color: #D75A95;
-  box-shadow: inset 1px 1px 130px black;
+  background-color: #A5CDFF;
+  /* box-shadow: inset 1px 1px 130px black; */
+}
+
+.form-item {
+  margin: auto;
+}
+
+.form-button {
+  background-color: white;
+  color: #18467F;
+}
+
+.form-button-active {
+  background-color: #18467F;
+  color: white;
 }
 
 .social {
@@ -645,16 +660,13 @@ select {
 }
 
 button {
-  background-color: rgba(32, 218, 32, 0.863);
-  border-radius: 10px;
-  padding: 5px 10px;
+  border-radius: 20px;
+  padding: 5px 20px;
   margin: 5px;
   font-weight: 600;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: rgba(38, 168, 38, 0.863);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 hr {
