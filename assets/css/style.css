@@ -159,7 +159,7 @@ a, a:hover, a:focus, a:active {
   max-width: 400px;
   border-radius: 5px;
   background-color: #D75A95;
-  box-shadow: inset 1px 1px 30px rgba(95, 95, 95, 0.39);
+  box-shadow: inset 0 0 200px 30px rgb(255, 255, 255, 0.3);
 
 }
 
@@ -251,20 +251,20 @@ a, a:hover, a:focus, a:active {
   align-items: start;
   justify-content: space-between;
   border-radius: 4px;
-  box-shadow: inset 0 0 10px 3px #69696963;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
 }
 
 .atributos-2 {
   width: 93%;
   padding: 10px 10px;
   margin: 2px;
-  background-color: #f0f0f040;
+  background-color:rgb(255, 255, 255, 0.6);
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
   border-radius: 4px;
-  box-shadow: inset 0 0 10px #76767652;
+  box-shadow: 0 0 4px 2px rgb(255, 255, 255, 0.7);
 }
 
 /* End Card */

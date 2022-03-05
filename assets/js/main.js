@@ -6,63 +6,63 @@ let formulario = 'calouro'
 const signos = {
   "aries": {
     url: "./public/images/aries.png",
-    color: "linear-gradient(225deg, rgba(241, 14, 14, 1) 0%, rgba(19, 161, 228, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(241, 14, 14, 1) 50%, rgba(19, 161, 228, 1) 100%)",
     complementar: "rgba(19, 161, 228, 0.6)",
   },
   "touro": {
     url: "./public/images/touro.png",
-    color: "linear-gradient(225deg, rgba(216, 121, 242, 1) 0%, rgba(78, 208, 89, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(216, 121, 242, 1) 50%, rgba(78, 208, 89, 1) 100%)",
     complementar: "rgba(78, 208, 89, 0.6)",
   },
   "gemeos": {
     url: "./public/images/gemeos.png",
-    color: "linear-gradient(225deg, rgba(255, 217, 59, 1) 0%, rgba(59, 233, 255, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(255, 217, 59, 1) 50%, rgba(59, 233, 255, 1) 100%)",
     complementar: "rgba(59, 233, 255, 0.6)",
   },
   "cancer": {
     url: "./public/images/cancer.png",
-    color: "linear-gradient(225deg, rgba(255, 255, 255, 1) 0%, rgba(243, 205, 6, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(123, 123, 123, 1) 50%, rgba(243, 205, 6, 1) 100%)",
     complementar: "rgba(243, 205, 6, 0.6)",
   },
   "leao": {
     url: "./public/images/leao.png",
-    color: "linear-gradient(225deg, rgba(255, 124, 43, 1) 0%, rgba(252, 148, 254, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(255, 124, 43, 1) 50%, rgba(252, 148, 254, 1) 100%)",
     complementar: "rgba(252, 148, 254, 0.6)"
   },
   "virgem": {
     url: "./public/images/virgem.png",
-    color: "linear-gradient(225deg, rgba(128, 247, 77, 1) 0%, rgba(240, 128, 128, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(128, 247, 77, 1) 50%, rgba(240, 128, 128, 1) 100%)",
     complementar: "rgba(240, 128, 128, 0.6)",
   },
   "libra": {
     url: "./public/images/libra.png",
-    color: "linear-gradient(225deg, rgba(255, 129, 208, 1) 0%, rgba(33, 188, 255, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(255, 129, 208, 1) 50%, rgba(33, 188, 255, 1) 100%)",
     complementar: "rgba(33, 188, 255, 0.6)",
   },
   "escorpiao": {
     url: "./public/images/escorpiao.png",
-    color: "linear-gradient(225deg, rgba(108, 42, 44, 1) 0%, rgba(238, 129, 29, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(108, 42, 44, 1) 50%, rgba(238, 129, 29, 1) 100%)",
     complementar: "rgba(238, 129, 29, 0.6)"
   },
   "sagitario": {
     url: "./public/images/sagitario.png",
-    color: "linear-gradient(225deg, rgba(62, 10, 82, 1) 0%, rgba(222, 15, 15, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(62, 10, 82, 1) 50%, rgba(222, 15, 15, 1) 100%)",
     complementar: "rgba(222, 15, 15, 0.6)"
   },
   "capricornio": {
     url: "./public/images/capricornio.png",
-    color: "linear-gradient(225deg, rgba(2, 0, 3, 1) 0%, rgba(142, 68, 237, 1) 100%)",
-    complementar: "rgba(142, 68, 237, 0.6)",
+    color: "linear-gradient(225deg, rgba(2, 0, 3, 1) 50%, rgba(205, 166, 255, 1) 100%)",
+    complementar: "rgba(205, 166, 255, 0.6)",
   },
   "aquario": {
     url: "./public/images/aquario.png",
-    color: "linear-gradient(225deg, rgba(21, 97, 201, 1) 0%, rgba(171, 197, 16, 1) 100%)",
+    color: "linear-gradient(225deg, rgba(21, 97, 201, 1) 50%, rgba(171, 197, 16, 1) 100%)",
     complementar: "rgba(171, 197, 16, 0.6)"
   },
   "peixes": {
     url: "./public/images/peixes.png",
-    color: "linear-gradient(225deg, rgba(107, 162, 242, 1) 0%, rgba(14, 112, 112, 1) 100%)",
-    complementar: "rgba(14, 112, 112, 0.6)"
+    color: "linear-gradient(225deg, rgba(107, 162, 242, 1) 50%, rgba(42, 242, 242, 1) 100%)",
+    complementar: "rgba(42, 242, 242, 0.6)"
   }
 }
 function trocarFormulario(nome) {
