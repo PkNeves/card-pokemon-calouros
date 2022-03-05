@@ -130,7 +130,7 @@ async function pegaDadosPokemon(nome) {
   for (let i = 0; i<nome.length; i++) {
     count += nome.charCodeAt(i)
   }
-  let pokemonNumber = count % 151
+  let pokemonNumber = (count % 151) + 1
 
   let data = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`)
   poemDadosPokemon(data)
