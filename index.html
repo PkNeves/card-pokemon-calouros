@@ -15,14 +15,14 @@
             <span translate="no" id="nome"> Ash </span>
           </div>
           <div class="signo">
-            <img src="./public/aries.png" id="img-signo">
+            <img src="./public/images/aries.png" id="img-signo">
           </div>
           <div class="pokemon">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" id='img-pokemon'>
           </div>
         </div>
         <div class="img">
-          <img src="./public/ash.jpg" id="img-character">
+          <img src="./public/images/ash.jpg" id="img-character">
         </div>
         <div class="atributos-div">
           <div class="atributos-items">
@@ -68,85 +68,113 @@
   </div>
   
   <div id="form-total">
-    <div id="google_translate_element"></div>
     <div class="form">
+      <div id="google_translate_element"></div>
       <div class="title">
-        <img src="./public/title.png">
+        <img src="./public/images/title.png">
       </div>
      
-      <div class="form-item">
-       <button class="form-button" onclick="trocarFormulario()">Formulario Simples</button>
-       <button class="form-button-active" onclick="trocarFormulario()">Formulario Calouro</button>
+      <div class="row change-form-buttons">
+       <button class="form-button" id="button-simples" onclick="trocarFormulario('simples')">Formulario Simples</button>
+       <button class="form-button-active" id="button-calouro" onclick="trocarFormulario('calouro')">Formulario Calouro</button>
       </div>
-      <div class="form-item">
-        <label>Nome:</label><input type="text" placeholder="Ash" name="nome">
+      <div class="row">
+        <div class="column">
+          <label>Nome:</label>
+          <input type="text" placeholder="Ash" name="nome">
+        </div>
+        <div class="column calouro">
+          <label>Pronomes:</label>
+          <input type="text" placeholder="Ele / Dele" name="pronomes">
+        </div>
+        <div class="column simples">
+          <label>Apelido:</label><input type="text" placeholder="Ashezinho" name="apelido">
+        </div>
       </div>
-      <div class="form-item calouro">
-        <label>Pronomes:</label><input type="text" placeholder="Ele / Dele" name="pronomes">
+      <div class="row">
+        <div class="column">
+          <label>@twitter:</label><input type="text" placeholder="@ash_u_gostoso" name="twitter">
+        </div>
+        <div class="column">
+          <label>@instagram:</label><input type="text" placeholder="@ash_u_gostoso_2015" name="instagram">
+        </div>
       </div>
-      <div class="form-item simples">
-        <label>Apelido:</label><input type="text" placeholder="Ashezinho" name="apelido">
+      <div class="row">
+        <div class="column">
+          <label>Idade:</label><input type="text" placeholder="18" name="idade">
+        </div>
+        <div class="column">
+          <label>Cidade:</label><input type="text" placeholder="Pokelandia" name="cidade">
+        </div>
       </div>
-      <div class="form-item">
-        <label>@twitter:</label><input type="text" placeholder="@ash_u_gostoso" name="twitter">
+      
+      <div class="row calouro">
+        <div class="column">
+          <label>Orientação sexual:</label><input type="text" placeholder="Nada a declarar" name="sexual">
+        </div>
+        <div class="column">
+          <label>Orientação politica:</label><input type="text" placeholder="Poliglota" name="politica">
+        </div>
       </div>
-      <div class="form-item">
-        <label>@instagram:</label><input type="text" placeholder="@ash_u_gostoso_2015" name="instagram">
+      <div class="row">
+        <div class="column">
+          <label>Hobbies:</label><input type="text" placeholder="Taka o pikachu nos outros" name="hobbies">
+        </div>
+        <div class="column">
+          <label>Animes preferidos:</label><input type="text" placeholder="Digimon" name="animes">
+        </div>
       </div>
-      <div class="form-item">
-        <label>Idade:</label><input type="text" placeholder="18" name="idade">
+      <div class="row calouro">
+        <div class="column">
+          <label>Bebe:</label><input type="text" placeholder="Agua que o pidgey não bebe" name="bebe">
+        </div>
+        <div class="column">
+          <label>Usa quais drogas:</label><input type="text" placeholder="Erva de gato" name="drogas">
+        </div>
       </div>
-      <div class="form-item simples">
-        <label>Profissão:</label><input type="text" placeholder="Estudante / Programador" name="profissao">
+      <div class="row">
+        <div class="column">
+          <label>Relacionamento:</label><input type="text" placeholder="Enrolado" name="relacionamento">
+        </div>
+        <div class="column">
+          <label>Signo:</label><select id='select-img-signo'>
+              <option value="aries">Aries</option>
+              <option value="touro">Touro</option>
+              <option value="gemeos">Gemeos</option>
+              <option value="cancer">Cancer</option>
+              <option value="leao">Leao</option>
+              <option value="virgem">Virgem</option>
+              <option value="libra">Libra</option>
+              <option value="escorpiao">Escorpiao</option>
+              <option value="sagitario">Sagitario</option>
+              <option value="capricornio">Capricornio</option>
+              <option value="aquario">Aquario</option>
+              <option value="peixes">Peixes</option>
+            </select>
+        </div>
       </div>
-      <div class="form-item">
-        <label>Cidade:</label><input type="text" placeholder="Pokelandia" name="cidade">
+      <div class="row">
+        <div class="column simples">
+          <label>Profissão:</label><input type="text" placeholder="Estudante / Programador" name="profissao">
+        </div>
+        <div class="column">
+          <label>Sua imagem:</label>
+          <label id="label-arquivo" for="arquivo">Escolher arquivo:</label><input type="file" name='img-character' id="arquivo"> 
+        </div>
       </div>
-      <div class="form-item calouro">
-        <label>Orientação sexual:</label><input type="text" placeholder="Nada a declarar" name="sexual">
+      <div class="row center">
+        <button class="confirmar" onclick="confirma()">Confirmar Dados</button>
       </div>
-      <div class="form-item calouro">
-        <label>Orientação politica:</label><input type="text" placeholder="Poliglota" name="politica">
+      <hr class="creditos">
+      <div class="row center creditos">
+        <p>Desenvolvido por:</p>
       </div>
-      <div class="form-item">
-        <label>Hobbies:</label><input type="text" placeholder="Taka o pikachu nos outros" name="hobbies">
-      </div>
-      <div class="form-item calouro">
-        <label>Bebe:</label><input type="text" placeholder="Agua que o pidgey não bebe" name="bebe">
-      </div>
-      <div class="form-item calouro">
-        <label>Usa quais drogas:</label><input type="text" placeholder="Erva de gato" name="drogas">
-      </div>
-      <div class="form-item">
-        <label>Animes preferidos:</label><input type="text" placeholder="Digimon" name="animes">
-      </div>
-      <div class="form-item">
-        <label>Relacionamento:</label><input type="text" placeholder="Enrolado" name="relacionamento">
-      </div>
-      <div class="form-item">
-        <label>Signo:</label><select id='select-img-signo'>
-            <option value="aries">Aries</option>
-            <option value="touro">Touro</option>
-            <option value="gemeos">Gemeos</option>
-            <option value="cancer">Cancer</option>
-            <option value="leao">Leao</option>
-            <option value="virgem">Virgem</option>
-            <option value="libra">Libra</option>
-            <option value="escorpiao">Escorpiao</option>
-            <option value="sagitario">Sagitario</option>
-            <option value="capricornio">Capricornio</option>
-            <option value="aquario">Aquario</option>
-            <option value="peixes">Peixes</option>
-          </select>
-      </div>
-        <label id="label-arquivo" for="arquivo">Sua Imagem:</label><input type="file" name='img-character' id="arquivo"> 
       <div class="social">
-        <a href="https://www.instagram.com/pettersonk/" target="_blank"><img class="social-icon" src="./public/instagram.png"></a>
-        <a href="https://www.linkedin.com/in/petterson-neves-62051a129/" target="_blank"><img class="social-icon" src="./public/linkedin.png"></a>
-        <a href="https://github.com/PkNeves" target="_blank"><img class="social-icon" src="./public/github.png"></a>
+        <a href="https://www.instagram.com/pettersonk/" target="_blank"><img class="social-icon" src="./public/images/instagram.png"></a>
+        <a href="https://www.linkedin.com/in/petterson-neves-62051a129/" target="_blank"><img class="social-icon" src="./public/images/linkedin.png"></a>
+        <a href="https://github.com/PkNeves" target="_blank"><img class="social-icon" src="./public/images/github.png"></a>
       </div>
     </div>
-    <button onclick="confirma()">Confirmar</button>
   </div>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>

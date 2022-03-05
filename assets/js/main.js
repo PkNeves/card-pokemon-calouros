@@ -5,92 +5,92 @@ let formulario = 'calouro'
 
 const signos = {
   "aries": {
-    url: "./public/aries.png",
+    url: "./public/images/aries.png",
     color: "#F30D0D",
     complementar: "#01adff",
   },
   "touro": {
-    url: "./public/touro.png",
+    url: "./public/images/touro.png",
     color: "#D879F2",
     complementar: "#91da97",
   },
   "gemeos": {
-    url: "./public/gemeos.png",
+    url: "./public/images/gemeos.png",
     color: "#FFD93B",
     complementar: "#3be9ff",
   },
   "cancer": {
-    url: "./public/cancer.png",
+    url: "./public/images/cancer.png",
     color: "#FFFFFF",
     complementar: "fa7f72",
   },
   "leao": {
-    url: "./public/leao.png",
+    url: "./public/images/leao.png",
     color: "#FF7A28",
   },
   "virgem": {
-    url: "./public/virgem.png",
+    url: "./public/images/virgem.png",
     color: "#80F74D",
     complementar: "#f08080",
   },
   "libra": {
-    url: "./public/libra.png",
+    url: "./public/images/libra.png",
     color: "#FF81D0",
     complementar: "#81ffd8",
   },
   "escorpiao": {
-    url: "./public/escorpiao.png",
+    url: "./public/images/escorpiao.png",
     color: "#6C2A2C",
     complementar: "#9f6d6b"
   },
   "sagitario": {
-    url: "./public/sagitario.png",
+    url: "./public/images/sagitario.png",
     color: "#3E0A52",
     complementar: "#b8860b"
   },
   "capricornio": {
-    url: "./public/capricornio.png",
+    url: "./public/images/capricornio.png",
     color: "#020003",
     complementar: "#fffff0",
   },
   "aquario": {
-    url: "./public/aquario.png",
+    url: "./public/images/aquario.png",
     color: "#1561C9",
     complementar: "#c5de00"
   },
   "peixes": {
-    url: "./public/peixes.png",
+    url: "./public/images/peixes.png",
     color: "#6BA2F2",
     complementar: "#cfc48e"
   }
 }
 const ids = ['nome', 'img-signo', 'img-pokemon', 'img-character', 'pronome', 'twitter', 'instagram', 'idade', 'cidade', 'sexual', 'politica', 'hobbies', 'bebe', 'drogas', 'animes', 'relacionamento']
 
-function trocarFormulario() {
-  if (formulario == 'simples') {
-    formulario = 'calouro'
-    let label = document.querySelector("#label-formulario").innerHTML = "Formulário Calouro"
-    let camposSimples = document.querySelectorAll(".simples")
-    let camposCalouros = document.querySelectorAll(".calouro")
+function trocarFormulario(nome) {
+  if (formulario == nome) return;
+  else {
+    let esconder = formulario
+    let mostrar = nome
+    formulario = nome
+    
+    let buttonDesativar = document.querySelector(`#button-${esconder}`)
+    buttonDesativar.classList.remove("form-button-active")
+    buttonDesativar.classList.add("form-button")
+    
+    let buttonAtivar = document.querySelector(`#button-${mostrar}`)
+    buttonAtivar.classList.add("form-button-active")
+    buttonAtivar.classList.remove("form-button")
 
-    for (let i = 0; i<camposSimples.length; i++) {
-      camposSimples[i].style.display = 'none';
-    }
-    for (let i = 0; i<camposCalouros.length; i++) {
-      camposCalouros[i].style.display = 'block';
-    }
-  } else {
-    formulario = 'simples'
-    let label = document.querySelector("#label-formulario").innerHTML = "Formulário Simples"
 
-    let camposSimples = document.querySelectorAll(".simples")
-    let camposCalouros = document.querySelectorAll(".calouro")
 
-    for (let i = 0; i<camposSimples.length; i++) {
-      camposSimples[i].style.display = 'block';
+    let campoMostrar = document.querySelectorAll(`.${mostrar}`)
+    let campoEsconder = document.querySelectorAll(`.${esconder}`)
+
+    for (let i = 0; i<campoMostrar.length; i++) {
+      campoMostrar[i].style.display = 'flex';
     }
-    for (let i = 0; i<camposCalouros.length; i++) {
-      camposCalouros[i].style.display = 'none';
+    for (let i = 0; i<campoEsconder.length; i++) {
+      campoEsconder[i].style.display = 'none';
     }
   }
 }

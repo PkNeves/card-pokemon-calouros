@@ -1,4 +1,58 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End Reset */
 
+
+/* Basic */
+@font-face {
+font-family: 'Roboto';
+src: url('../../public/fonts/Roboto/Roboto-Regular.ttf');
+}
+/* End Basic */
+
+/* Formulario */
 .botao {
   text-align: center;
   padding: 4px 10px;
@@ -12,19 +66,14 @@
   background-color: #3abb3a;
 }
 
-.simples {
-  display: none;
-}
 
-@font-face {
-    font-family: 'pokemon';
-    src: url('./PokemonSolid.ttf');
-}
+
+
 
 .title {
   margin: auto;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 h2 {
@@ -175,11 +224,10 @@ body {
 }
 
 .form {
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   /* border: 1px solid black; */
-  align-items: end;
   box-sizing: border-box;
   margin: 0;
   position: relative;
@@ -187,7 +235,7 @@ body {
   min-width: 400px;
   max-width: 400px;
   border-radius: 5px;
-  background-color: #A5CDFF;
+  background-color: rgba(165, 205, 255, 0.3);
   /* box-shadow: inset 1px 1px 130px black; */
 }
 
@@ -203,25 +251,32 @@ body {
 .form-button-active {
   background-color: #18467F;
   color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .social {
-  padding-top: 10px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
+.social a{
+  padding: 5px;
+}
+
 .social-icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 input , select {
-  margin: 5px;
-  border-radius: 10px;
-  padding: 3px 10px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  width: 170px;
+  border: 0.5px solid #5393E5;
+  box-sizing: border-box;
+  outline: 0;
 }
 
 input::placeholder {
@@ -232,20 +287,27 @@ input[type="file"] {
     display: none;
 }
 
+input:hover {
+  border: 0.5px solid #FFCB05;
+}
+
+input:focus {
+  border: 1.5px solid #FFCB05;
+}
+
 #label-arquivo {
-    margin: 10px;
-    padding: 10px 10px;
-    width: 90%;
-    background-color: #FEE064;
-    text-transform: uppercase;
+    margin: 0;
+    background-color: #C2C2C2;
     text-align: center;
     display: block;
-    margin-top: 10px;
     cursor: pointer;
     border-radius: 5px;
+    padding: 8px 20px;
+    width: 170px;
+    box-sizing: border-box;
   }
 #label-arquivo:hover {
-  background-color: #cfb54a;
+  background-color: #BB9400;
     
 }
 
@@ -254,18 +316,12 @@ label {
   font-weight: 900;
 }
 
-select {
-  width: 185px;
-}
-
 button {
   border-radius: 20px;
-  padding: 5px 20px;
-  margin: 5px;
+  padding: 6px 20px;
   font-weight: 600;
   cursor: pointer;
   border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 hr {
@@ -287,4 +343,75 @@ a, a:hover, a:focus, a:active {
       font-weight: 600;
       font-size: 0.9em;
       cursor: pointer;
- }
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+
+.change-form-buttons {
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 14px;
+  margin-left: 4px;
+  margin-bottom: 2px;
+}
+
+.confirmar {
+  background-color: #18467F;
+  color: white;
+  border-radius: 15px;
+  padding: 10px 50px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.center {
+  justify-content: center;
+}
+
+.creditos {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.creditos p {
+  margin: 5px;
+  color: #5C5C5C;
+}
+
+hr.creditos {
+  margin: 0;
+}
+
+span {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+strong {
+  padding-right: 5px;
+}
+
+.simples {
+  display: none;
+}
