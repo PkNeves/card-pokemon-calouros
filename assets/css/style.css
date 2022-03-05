@@ -45,35 +45,10 @@ table {
 /* End Reset */
 
 
-/* Basic */
+/* Global */
 @font-face {
 font-family: 'Roboto';
 src: url('../../public/fonts/Roboto/Roboto-Regular.ttf');
-}
-/* End Basic */
-
-/* Formulario */
-.botao {
-  text-align: center;
-  padding: 4px 10px;
-  background-color: #3FDF3F;
-  margin: 5px;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-.botao:hover {
-  background-color: #3abb3a;
-}
-
-
-
-
-
-.title {
-  margin: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
 }
 
 h2 {
@@ -88,6 +63,85 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
+input , select {
+  border-radius: 5px;
+  padding: 6px 10px;
+  width: 170px;
+  border: 0.5px solid #5393E5;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input:hover {
+  border: 0.5px solid #FFCB05;
+}
+
+input:focus {
+  border: 1.5px solid #FFCB05;
+}
+
+span {
+  display: inline;
+  flex-wrap: wrap;
+}
+
+strong {
+  padding-right: 5px;
+  font-weight: 700;
+}
+
+
+label {
+  font-weight: 900;
+}
+
+button {
+  border-radius: 20px;
+  padding: 6px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+hr {
+  width: 100%;
+}
+
+
+label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 14px;
+  margin-left: 4px;
+  margin-bottom: 2px;
+}
+
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+  color: black;
+  font-weight: 600;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+/* End Global */
+
+
+/* Card */
 
 #carta-botao {
   display: none;
@@ -105,7 +159,7 @@ body {
   max-width: 400px;
   border-radius: 5px;
   background-color: #D75A95;
-  box-shadow: inset 1px 1px 130px black;
+  box-shadow: inset 1px 1px 30px rgba(95, 95, 95, 0.39);
 
 }
 
@@ -162,8 +216,6 @@ body {
   height: 100px;
 }
 
-
-
 .img {
   padding: 0;
   margin: 0;
@@ -195,26 +247,30 @@ body {
 .atributos {
   padding: 4px 10px;
   margin: 2px;
-  background-color: #FEE064;
   display: flex;
   align-items: start;
   justify-content: space-between;
   border-radius: 4px;
-  box-shadow: inset 0 0 15px black;
+  box-shadow: inset 0 0 10px 3px #69696963;
 }
 
 .atributos-2 {
   width: 93%;
   padding: 10px 10px;
   margin: 2px;
-  background-color: #f0f0f0;
+  background-color: #f0f0f040;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
   border-radius: 4px;
-  box-shadow: inset 0 0 15px black;
+  box-shadow: inset 0 0 10px #76767652;
 }
+
+/* End Card */
+
+
+/* Form */
 
 #form-total {
   min-width: 400px;
@@ -227,16 +283,13 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
   box-sizing: border-box;
   margin: 0;
   position: relative;
-  /* border: 7px solid #FEE064; */
   min-width: 400px;
   max-width: 400px;
   border-radius: 5px;
   background-color: rgba(165, 205, 255, 0.3);
-  /* box-shadow: inset 1px 1px 130px black; */
 }
 
 .form-item {
@@ -270,31 +323,6 @@ body {
   height: 25px;
 }
 
-input , select {
-  border-radius: 5px;
-  padding: 6px 10px;
-  width: 170px;
-  border: 0.5px solid #5393E5;
-  box-sizing: border-box;
-  outline: 0;
-}
-
-input::placeholder {
-  opacity: 0.5;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-input:hover {
-  border: 0.5px solid #FFCB05;
-}
-
-input:focus {
-  border: 1.5px solid #FFCB05;
-}
-
 #label-arquivo {
     margin: 0;
     background-color: #C2C2C2;
@@ -311,38 +339,43 @@ input:focus {
     
 }
 
-
-label {
-  font-weight: 900;
-}
-
-button {
+.botao {
+  margin-top: 6px;
+  margin-bottom: 3px;
   border-radius: 20px;
-  padding: 6px 20px;
-  font-weight: 600;
+  padding: 8px 20px;
+  font-weight: 500;
   cursor: pointer;
   border: none;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
-hr {
-  width: 100%;
+.bg-blue {
+  background-color: #18467F;
+  color: white;
 }
 
-.voltar {
-  background-color: #FEE064;
+.bg-blue:hover {
+  background-color: #08264C;
+  color: white;
 }
 
-.voltar:hover {
-  background-color: #ddc04a;
+.bg-yellow {
+  background-color: #FFCB05;
+  color: black;
 }
 
-a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
-      color: black;
-      font-weight: 600;
-      font-size: 0.9em;
-      cursor: pointer;
+.bg-yellow:hover {
+  background-color: #BB9400;
+  color: black;
+}
+
+.title {
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .row {
@@ -365,15 +398,6 @@ a, a:hover, a:focus, a:active {
   align-items: flex-start;
 }
 
-label {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 14px;
-  margin-left: 4px;
-  margin-bottom: 2px;
-}
 
 .confirmar {
   background-color: #18467F;
@@ -403,15 +427,8 @@ hr.creditos {
   margin: 0;
 }
 
-span {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-strong {
-  padding-right: 5px;
-}
-
 .simples {
   display: none;
 }
+
+/* End Form */

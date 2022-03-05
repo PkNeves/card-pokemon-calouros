@@ -6,66 +6,65 @@ let formulario = 'calouro'
 const signos = {
   "aries": {
     url: "./public/images/aries.png",
-    color: "#F30D0D",
-    complementar: "#01adff",
+    color: "linear-gradient(225deg, rgba(241, 14, 14, 1) 0%, rgba(100, 164, 194, 1) 100%)",
+    complementar: "rgba(100, 164, 194, 0.5)",
   },
   "touro": {
     url: "./public/images/touro.png",
-    color: "#D879F2",
-    complementar: "#91da97",
+    color: "linear-gradient(225deg, rgba(216, 121, 242, 1) 0%, rgba(78, 208, 89, 1) 100%)",
+    complementar: "rgba(78, 208, 89, 0.5)",
   },
   "gemeos": {
     url: "./public/images/gemeos.png",
-    color: "#FFD93B",
-    complementar: "#3be9ff",
+    color: "linear-gradient(225deg, rgba(255, 217, 59, 1) 0%, rgba(59, 233, 255, 1) 100%)",
+    complementar: "rgba(59, 233, 255, 0.5)",
   },
   "cancer": {
     url: "./public/images/cancer.png",
-    color: "#FFFFFF",
-    complementar: "fa7f72",
+    color: "linear-gradient(225deg, rgba(255, 255, 255, 1) 0%, rgba(243, 205, 6, 1) 100%)",
+    complementar: "rgba(243, 205, 6, 0.5)",
   },
   "leao": {
     url: "./public/images/leao.png",
-    color: "#FF7A28",
+    color: "linear-gradient(225deg, rgba(255, 124, 43, 1) 0%, rgba(252, 148, 254, 1) 100%)",
+    complementar: "rgba(252, 148, 254, 0.5)"
   },
   "virgem": {
     url: "./public/images/virgem.png",
-    color: "#80F74D",
-    complementar: "#f08080",
+    color: "linear-gradient(225deg, rgba(128, 247, 77, 1) 0%, rgba(240, 128, 128, 1) 100%)",
+    complementar: "rgba(240, 128, 128, 0.5)",
   },
   "libra": {
     url: "./public/images/libra.png",
-    color: "#FF81D0",
-    complementar: "#81ffd8",
+    color: "linear-gradient(225deg, rgba(255, 129, 208, 1) 0%, rgba(33, 188, 255, 1) 100%)",
+    complementar: "rgba(33, 188, 255, 0.5)",
   },
   "escorpiao": {
     url: "./public/images/escorpiao.png",
-    color: "#6C2A2C",
-    complementar: "#9f6d6b"
+    color: "linear-gradient(225deg, rgba(108, 42, 44, 1) 0%, rgba(238, 129, 29, 1) 100%)",
+    complementar: "rgba(238, 129, 29, 0.5)"
   },
   "sagitario": {
     url: "./public/images/sagitario.png",
-    color: "#3E0A52",
-    complementar: "#b8860b"
+    color: "linear-gradient(225deg, rgba(62, 10, 82, 1) 0%, rgba(222, 15, 15, 1) 100%)",
+    complementar: "rgba(222, 15, 15, 0.5)"
   },
   "capricornio": {
     url: "./public/images/capricornio.png",
-    color: "#020003",
-    complementar: "#fffff0",
+    color: "linear-gradient(225deg, rgba(2, 0, 3, 1) 0%, rgba(142, 68, 237, 1) 100%)",
+    complementar: "rgba(142, 68, 237, 0.5)",
   },
   "aquario": {
     url: "./public/images/aquario.png",
-    color: "#1561C9",
-    complementar: "#c5de00"
+    color: "linear-gradient(225deg, rgba(21, 97, 201, 1) 0%, rgba(171, 197, 16, 1) 100%)",
+    complementar: "rgba(171, 197, 16, 0.5)"
   },
   "peixes": {
     url: "./public/images/peixes.png",
-    color: "#6BA2F2",
-    complementar: "#cfc48e"
+    color: "linear-gradient(225deg, rgba(107, 162, 242, 1) 0%, rgba(14, 112, 112, 1) 100%)",
+    complementar: "rgba(14, 112, 112, 0.5)"
   }
 }
-const ids = ['nome', 'img-signo', 'img-pokemon', 'img-character', 'pronome', 'twitter', 'instagram', 'idade', 'cidade', 'sexual', 'politica', 'hobbies', 'bebe', 'drogas', 'animes', 'relacionamento']
-
 function trocarFormulario(nome) {
   if (formulario == nome) return;
   else {
@@ -201,20 +200,9 @@ async function confirma() {
   // alter visualization
   form.style.display = 'none'
   cartaBotao.style.display = 'flex'
-  margem.style.backgroundColor = signos[signo].color
+  // margem.style.backgroundColor = signos[signo].color
+  margem.style.background = signos[signo].color
 
-//   domtoimage.toPng(margem)
-//   .then(function (dataUrl) {
-//       let link = document.querySelector("#salvar")
-//       // var link=window.URL.createObjectURL(blob);
-//       // window.location=link;
-//       // var link = document.createElement('a');
-//       link.download = 'my-card-pokemon.png';
-//       link.href = dataUrl;
-
-//       // link.click();
-//       // link.remove();
-// });
 }
 
 function salvar() {
@@ -222,8 +210,6 @@ function salvar() {
 
   domtoimage.toPng(node)
   .then(function (dataUrl) {
-      // var link=window.URL.createObjectURL(blob);
-      // window.location=link;
       var link = document.createElement('a');
       link.download = 'my-card-pokemon.png';
       link.href = dataUrl;
