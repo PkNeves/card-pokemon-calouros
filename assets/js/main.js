@@ -90,7 +90,7 @@ function trocarFormulario(nome) {
       if (tag === 'DIV')
         campoMostrar[i].style.display = 'flex';
       else 
-        campoMostrar[i].style.display = 'block';
+        campoMostrar[i].style.display = 'inline';
 
     }
     for (let i = 0; i<campoEsconder.length; i++) {
