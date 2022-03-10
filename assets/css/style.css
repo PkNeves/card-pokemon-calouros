@@ -241,11 +241,23 @@ a, a:hover, a:focus, a:active {
 .atributos {
   padding: 4px 10px;
   margin: 2px;
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
+  /* display: flex; */
+  /* align-items: start; */
+  /* justify-content: space-between; */
   border-radius: 4px;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.span-item {
+  width: 49%;
+  display: inline;
+  float: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.span-pokemon {
+  text-align: end;
 }
 
 .atributos-2 {
