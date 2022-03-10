@@ -90,11 +90,6 @@ input:focus {
   border: 1.5px solid #FFCB05;
 }
 
-span {
-  display: inline;
-  flex-wrap: wrap;
-}
-
 strong {
   font-weight: 700;
 }

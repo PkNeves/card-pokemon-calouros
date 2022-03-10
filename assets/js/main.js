@@ -86,7 +86,12 @@ function trocarFormulario(nome) {
     let campoEsconder = document.querySelectorAll(`.${esconder}`)
 
     for (let i = 0; i<campoMostrar.length; i++) {
-      campoMostrar[i].style.display = 'flex';
+      let tag = campoMostrar[i].tagName
+      if (tag === 'DIV')
+        campoMostrar[i].style.display = 'flex';
+      else 
+        campoMostrar[i].style.display = 'block';
+
     }
     for (let i = 0; i<campoEsconder.length; i++) {
       campoEsconder[i].style.display = 'none';
